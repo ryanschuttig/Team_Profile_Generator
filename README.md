@@ -14,28 +14,6 @@ getEmail()
 getRole() // Returns 'Employee'
 The other three classes will extend Employee.
 
-In addition to Employee's properties and methods, Manager will also have:
-
-officeNumber
-
-getRole() // Overridden to return 'Manager'
-
-In addition to Employee's properties and methods, Engineer will also have:
-
-github // GitHub username
-
-getGithub()
-
-getRole() // Overridden to return 'Engineer'
-
-In addition to Employee's properties and methods, Intern will also have:
-
-school
-
-getSchool()
-
-getRole() // Overridden to return 'Intern'
-
 User input
 The project must prompt the user to build an engineering team. An engineering team consists of a manager, and any number of engineers and interns.
 
