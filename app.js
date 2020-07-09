@@ -128,7 +128,7 @@ function promptIntern() {
             promptUser();
         })
 }
-function end(){
+function end() {
     console.log("Team successfully created!");
 
     fs.writeFile(outputPath, render(teamArray), (err) => {
@@ -138,7 +138,3 @@ function end(){
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
-
-// After you have your html, you're now ready to create an HTML file using the HTML
-// returned from the `render` function. Now write it to a file named `team.html` in the
-// `output` folder. You can use the variable `outputPath` above target this location.
