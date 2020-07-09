@@ -28,6 +28,7 @@ function promptUser() {
             ]
         },
     ])
+        // changes questions based on which choice was chosen
         .then(function (answer) {
             switch (answer.role) {
                 case "Manager":
@@ -70,8 +71,9 @@ function promptManager() {
             message: "What is your office number?",
         }
     ])
+        // pushes manager answers to array
         .then((answers) => {
-            const newMan = new Manager (answers.name, answers.email, answers.id, answers.manager);
+            const newMan = new Manager(answers.name, answers.email, answers.id, answers.manager);
             teamArray.push(newMan);
             promptUser();
         })
@@ -99,8 +101,9 @@ function promptEngineer() {
             message: "What is your GitHub Username?",
         }
     ])
+        // pushes engineer answers to array
         .then((answers) => {
-            const newEng = new Engineer (answers.name, answers.email, answers.id, answers.engineer);
+            const newEng = new Engineer(answers.name, answers.email, answers.id, answers.engineer);
             teamArray.push(newEng);
             promptUser();
         })
@@ -128,8 +131,9 @@ function promptIntern() {
             message: "Where did you go to school?",
         }
     ])
+        // pushes intern answers to array
         .then((answers) => {
-            const newInt = new Intern (answers.name, answers.email, answers.id, answers.intern);
+            const newInt = new Intern(answers.name, answers.email, answers.id, answers.intern);
             teamArray.push(newInt);
             promptUser();
         })
