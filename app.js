@@ -70,7 +70,9 @@ function promptManager() {
             message: "What is your office number?",
         }
     ])
-        .then(() => {
+        .then((answers) => {
+            const newMan = new Manager (answers.name, answers.email, answers.id, answers.manager);
+            teamArray.push(newMan);
             promptUser();
         })
 }
@@ -93,11 +95,13 @@ function promptEngineer() {
         },
         {
             type: "input",
-            name: "manager",
+            name: "engineer",
             message: "What is your GitHub Username?",
         }
     ])
-        .then(() => {
+        .then((answers) => {
+            const newEng = new Engineer (answers.name, answers.email, answers.id, answers.engineer);
+            teamArray.push(newEng);
             promptUser();
         })
 }
@@ -120,11 +124,13 @@ function promptIntern() {
         },
         {
             type: "input",
-            name: "manager",
+            name: "intern",
             message: "Where did you go to school?",
         }
     ])
-        .then(() => {
+        .then((answers) => {
+            const newInt = new Intern (answers.name, answers.email, answers.id, answers.intern);
+            teamArray.push(newInt);
             promptUser();
         })
 }
@@ -134,7 +140,3 @@ function end() {
     fs.writeFile(outputPath, render(teamArray), (err) => {
     })
 };
-
-// After the user has input all employees desired, call the `render` function (required
-// above) and pass in an array containing all employee objects; the `render` function will
-// generate and return a block of HTML including templated divs for each employee!
