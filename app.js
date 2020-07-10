@@ -73,7 +73,7 @@ function promptManager() {
     ])
         // pushes manager answers to array
         .then((answers) => {
-            const newMan = new Manager(answers.name, answers.email, answers.id, answers.manager);
+            const newMan = new Manager(answers.name, answers.id, answers.email, answers.manager);
             teamArray.push(newMan);
             promptUser();
         })
@@ -103,7 +103,7 @@ function promptEngineer() {
     ])
         // pushes engineer answers to array
         .then((answers) => {
-            const newEng = new Engineer(answers.name, answers.email, answers.id, answers.engineer);
+            const newEng = new Engineer(answers.name, answers.id, answers.email, answers.engineer);
             teamArray.push(newEng);
             promptUser();
         })
@@ -133,7 +133,7 @@ function promptIntern() {
     ])
         // pushes intern answers to array
         .then((answers) => {
-            const newInt = new Intern(answers.name, answers.email, answers.id, answers.intern);
+            const newInt = new Intern(answers.name, answers.id, answers.email, answers.intern);
             teamArray.push(newInt);
             promptUser();
         })
