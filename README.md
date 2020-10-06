@@ -8,7 +8,7 @@
   ## Description
   The purpose of this project is to create a team by following the prompts and export that team to an html page.
   ## Installation
-  inquirer, fs
+  npm i
   ## Testing
   npm run test
   ## Questions
